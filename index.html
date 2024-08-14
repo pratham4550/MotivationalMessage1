@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Motivational Message Application with Raj</title>
+	<style>
+		*{font-size:40px;}
+		h2{font-size:60px;}
+		body{background-color:lightblue;}
+	</style>
+	</head>
+	<body>
+		<center>
+
+			<h1>Motivational Message Application</h2>
+			<form onsubmit="show()">
+<br/></br/><br/>
+				<input type="submit" value="Show Message"/>
+			</form>
+
+			<h2 id="msg"/>
+
+			<script>
+				function show(){
+					event.preventDefault();
+					let msg=document.getElementById("msg");
+					
+					let message=["Be a Warrior ","Just Do It","You Can Do It","All The Best"];
+					let r=parseInt(Math.random() * message.length);
+					msg.innerHTML=message[r];
+					}
+			</script>
+		</center>
+	</body>
+</html>
